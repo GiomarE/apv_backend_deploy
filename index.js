@@ -39,6 +39,6 @@ app.use("/api/pacientes", pacienteRoutes);
 
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`servidor funcionando en el puerto ${PORT}`);
 });
