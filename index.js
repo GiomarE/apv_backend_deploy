@@ -37,7 +37,7 @@ app.use(cors(corsOptions));
 app.use("/api/veterinarios", veterinarioRoutes);
 app.use("/api/pacientes", pacienteRoutes);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`servidor funcionando en el puerto ${PORT}`);
