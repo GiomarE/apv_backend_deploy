@@ -7,7 +7,6 @@ import conectarDB from "./config/db.js";
 import veterinarioRoutes from './routes/veterinarioRoutes.js';
 import pacienteRoutes from './routes/pacienteRoutes.js';
 
-
 const app = express();
 app.use(express.json); // para leer body de postman
 
@@ -37,8 +36,18 @@ app.use(cors(corsOptions));
 app.use("/api/veterinarios", veterinarioRoutes);
 app.use("/api/pacientes", pacienteRoutes);
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 4000;
 
+/*
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`servidor funcionando en el puerto ${PORT}`);
 });
+*/
+
+app.listen(PORT, (err) => {
+    if (err) {
+      console.error('Error al iniciar el servidor:', err);
+    } else {
+      console.log(`servidor funcionando en el puerto ${PORT}`);
+    }
+  });
