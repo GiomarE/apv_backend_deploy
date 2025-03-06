@@ -7,12 +7,16 @@ import conectarDB from "./config/db.js";
 import veterinarioRoutes from './routes/veterinarioRoutes.js';
 import pacienteRoutes from './routes/pacienteRoutes.js';
 
-const app = express();
-app.use(express.json); // para leer body de postman
+//const app = express();
+//app.use(express.json); // para leer body de postman
 
 dotenv.config();
 
 conectarDB();
+
+const app = express();
+app.use(express.json); 
+
 
 const dominiosPermitidos = [process.env.FRONTEND_URL];
 const corsOptions ={
