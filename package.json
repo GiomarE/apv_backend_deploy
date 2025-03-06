@@ -4,8 +4,8 @@
   "type": "module",
   "description": "FullStack",
   "main": "index.js",
-  "scripts": {
-    "start": "node --experimental-json-modules index.js",
+ "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "author": "Giomar",
